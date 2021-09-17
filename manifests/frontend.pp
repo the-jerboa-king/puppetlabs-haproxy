@@ -102,6 +102,7 @@ define haproxy::frontend (
   $defaults                                    = undef,
   $defaults_use_backend                        = true,
   Optional[Stdlib::Absolutepath] $config_file  = undef,
+  $http_response                               = undef,
   # Deprecated
   $bind_options                                = '',
 ) {
