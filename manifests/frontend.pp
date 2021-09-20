@@ -102,7 +102,11 @@ define haproxy::frontend (
   $defaults                                    = undef,
   $defaults_use_backend                        = true,
   Optional[Stdlib::Absolutepath] $config_file  = undef,
-  $http_response                               = undef,
+  $http_responses                              = {
+    'http-response'                           => [
+      'set-header',
+    ],
+  },
   # Deprecated
   $bind_options                                = '',
 ) {
